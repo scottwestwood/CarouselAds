@@ -1,0 +1,5 @@
+dist
+__mocks__
+/src/serviceWorker.js
+/src/setupTests.js
+

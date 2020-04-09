@@ -9,19 +9,19 @@ const { window } = jsdom;
 
 function copyProps(src, target) {
   const props = Object.getOwnPropertyNames(src)
-    .filter(prop => typeof target[prop] === 'undefined')
-    .map(prop => Object.getOwnPropertyDescriptor(src, prop));
+    .filter((prop) => typeof target[prop] === 'undefined')
+    .map((prop) => Object.getOwnPropertyDescriptor(src, prop));
   Object.defineProperties(target, props);
 }
 
 global.window = window;
 global.DOMParser = window.DOMParser;
-global.window.scrollTo = (xCoord, yCoord) => { }; // this fix jsdom's error: "Error: Not implemented: window.scrollTo"
-global.matchMedia = mediaQueryString => { };
+global.window.scrollTo = (xCoord, yCoord) => {}; // this fix jsdom's error: "Error: Not implemented: window.scrollTo"
+global.matchMedia = (mediaQueryString) => {};
 
 global.document = window.document;
 global.window.document.body.classList.remove = jest.fn();
-global.document.querySelector = elem => {
+global.document.querySelector = (elem) => {
   return {
     scrollTop: '',
     scrollLeft: '',
@@ -29,7 +29,7 @@ global.document.querySelector = elem => {
     scrollWidth: '',
     id: '',
     children: [],
-    localName: elem
+    localName: elem,
   };
 };
 
@@ -42,7 +42,7 @@ global.cancelAnimationFrame = function (id) {
 };
 
 global.navigator = {
-  userAgent: 'node.js'
+  userAgent: 'node.js',
 };
 global.fetch = require('fetch-everywhere');
 copyProps(window, global);
