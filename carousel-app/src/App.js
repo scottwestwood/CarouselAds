@@ -1,5 +1,5 @@
 import React from 'react';
-import './theme/App.scss';
+import styles from './theme/App.scss';
 import DummyAd from './components/DummyAd';
 
 /**
@@ -8,8 +8,8 @@ import DummyAd from './components/DummyAd';
  */
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className={styles.App}>
+      <header className={styles.Appheader}>
         <p>Carousel Adverts</p>
       </header>
       <div>

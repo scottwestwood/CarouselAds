@@ -5,7 +5,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 // import classNames from 'classnames';
 
-import '../DummyAd/DummyAd.scss';
+import styles from '../DummyAd/DummyAd.scss';
 
 /**
  * DummyAd React Type component.
@@ -21,7 +21,7 @@ class DummyAd extends PureComponent<*, *> {
    * @returns {ReactElement} markup
    */
   render() {
-    return <div className="wrapper">card</div>;
+    return <div className={styles.wrapper}>card</div>;
   }
 }
 
