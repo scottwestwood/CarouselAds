@@ -52,14 +52,14 @@ module.exports = {
     ],
     'camelcase': 0
   },
-  overrides: [
-    {
-      files: ['*.test.js'],
-      rules: {
-        'no-unused-expressions': { allowShortCircuit: true }
-      }
-    }
-  ],
+  // overrides: [
+  //   {
+  //     files: ['*.test.js'],
+  //     rules: {
+  //       'no-unused-expressions': { allowShortCircuit: true }
+  //     }
+  //   }
+  // ],
   globals: {
     ErrorCustom: true,
     expect: true,
